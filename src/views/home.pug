@@ -1,0 +1,27 @@
+doctype html 
+html(lang="en")
+    head 
+        //- html 파일의 인코딩 형식
+        meta(charset="UTF-8")
+        //- 최신 버전 IE 브라우저로 호환성 지정
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        //- 반응형 웹 기본 설정
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Noom
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+
+    boby 
+        header
+            h1 Noom
+        main
+            div#Stream
+                video#myFace(autoplay, playsinline, width="400", height="400")
+                button#mute Mute 
+                button#camera Turn Camera Off
+                h4 Camera Setting
+                select#cameras
+                h4 Mic Setting
+                select#mics
+        script(src="/socket.io/socket.io.js")
+        script(src="/public/js/app.js")
+
