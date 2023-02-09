@@ -14,14 +14,23 @@ html(lang="en")
         header
             h1 Noom
         main
-            div#Stream
-                video#myFace(autoplay, playsinline, width="400", height="400")
-                button#mute Mute 
-                button#camera Turn Camera Off
-                h4 Camera Setting
-                select#cameras
-                h4 Mic Setting
-                select#mics
+            div#welcome
+                form 
+                    input(type="text", placeholder="room name")
+                    button Enter Room 
+            div#call 
+                div#Stream
+                    video#myFace(autoplay, playsinline, width="400", height="400")
+                    br
+                    video#peerFace(autoplay, playsinline, width="400", height="400")
+                    br
+                    button#mute Mute 
+                    button#camera Turn Camera Off
+                    h4 Camera Setting
+                    select#cameras
+                    h4 Mic Setting
+                    select#mics
+                    
         script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
 
